@@ -1,0 +1,504 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block content%}
+
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li class="current">Shop</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Starter Section Section -->
+    <section id="starter-section" class="starter-section section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Shop</h2>
+        <p>Get quality merchandise from the st peters shop</p>
+      </div><!-- End Section Title -->
+
+        <div>
+          <h2>Tshirts</h2>
+        </div>
+
+     <div class="row">
+  <div class="col-6 col-md-4">
+  <div class="card" style="width: 23rem;">
+  <img class="card-img-top" src="{% static 'assets/img/Image 1.jpg'%}" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+  </div>
+
+  <div class="col-6 col-md-4">
+    <div class="card" style="width: 23rem;">
+  <img class="card-img-top" src="{% static 'assets/img/Image 3.jpg'%}" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+  </div>
+
+  <div class="col-6 col-md-4">
+    <div class="card" style="width: 23rem;">
+  <img class="card-img-top" src="{% static 'assets/img/Image 3.jpg'%}" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+  </div>
+    </div>
+
+      <br>
+
+<!--        Modal begins-->
+<div class="modal fade" id="ModalToggle11" aria-hidden="true" aria-labelledby="ModalToggleLabel1" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="ModalToggleLabel1">Place order</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+           </div>
+             <div class="modal-body">
+<!--                 first form begins-->
+               <form action="/tshirt" class='pad-bg' id="myForm1" enctype="multipart/form-data" method="post">
+
+                 {% csrf_token %}
+
+                  <div class="form-group">
+                   <label>Parent Name</label>
+                    <input type="text" class="i-box form-control input-lg" name="parents name" required/>
+                     </div>
+                       <div class="form-group">
+                           <label>Member Name</label>
+                            <input type="text" class="form-control input-lg" name="members name" required/>
+                             </div>
+                              <div class="form-group">
+						<label>What color would u like?</label>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input type="radio" id="customRadioInline11" value="blue" class="custom-control-input" checked="" name="color">
+							<label class="custom-control-label" for="customRadioInline11">Blue</label>
+						</div>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input type="radio" id="customRadioInline12" value="black" class="custom-control-input" name="color">
+							<label class="custom-control-label" for="customRadioInline12">Black</label>
+						</div>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input type="radio" id="customRadioInline13" value="red" class="custom-control-input" name="color">
+							<label class="custom-control-label" for="customRadioInline13">Red</label>
+						</div>
+                                   <div class="form-group">
+						<label>Choose size</label>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input type="radio" id="customRadioInline14" value="small" name="size" class="custom-control-input2" checked="">
+							<label class="custom-control-label" for="customRadioInline14">Small</label>
+						</div>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input type="radio" id="customRadioInline15" value="medium" name="size" class="custom-control-input22">
+							<label class="custom-control-label" for="customRadioInline15">Medium</label>
+						</div>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input type="radio" id="customRadioInline16" value="large" name="size" class="custom-control-input">
+							<label class="custom-control-label" for="customRadioInline16">Large</label>
+						</div>
+                             </div>
+
+                             </div>
+                        <div class="form-group">
+                           <label id="number-label1" for="number1">Number of units</label>
+						  <input type="number" name="units" id="number1" min="0" max="99" class="form-control" placeholder="Amount" required>
+                         </div>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-success mt-2" type="submit">order</button>
+                    </div>
+                </form>
+                 </div>
+                   <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Close</button>
+                    <button class="btn btn-primary" data-bs-target="#ModalToggle12" data-bs-toggle="modal" data-bs-dismiss="modal" type="submit">Pay</button>
+                  </div>
+            </div>
+        </div>
+    </div>
+<!--        first form/modal ends-->
+
+<!--        second modal begin-->
+<div class="modal fade" id="ModalToggle12" aria-hidden="true" aria-labelledby="ModalToggleLabel2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalToggleLabel2">Pay here</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+             <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+                    <strong>{{message}}</strong>
+              </div>
+          <form method="POST" action="/pay">
+              {% csrf_token %}
+                <label class="form-label mt-5">Phone Number</label>
+                <input type="number" name="phone" value="254" class="form-control">
+                <label class="form-label mt-5">Amount</label>
+              <input type="number" name="amount" class="form-control" placeholder="Please Enter Amount">
+
+              <input type="submit" name="submit" class="form-control mt-5 btn btn-success" value="pay">
+
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-bs-target="#ModalToggle23" data-bs-toggle="modal" data-bs-dismiss="modal">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--        second form ends-->
+
+<!--        Third form starts-->
+        <div class="modal fade" id="ModalToggle13" aria-hidden="true" aria-labelledby="eModalToggleLabel3" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalToggleLabel3">Pay here</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h2>THank you!!!</h2>
+      </div>
+      <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--       Trigger button -->
+<a class="btn btn-primary" data-bs-toggle="modal" href="#ModalToggle11" role="button">Buy Now</a>
+<!--        trigger end-->
+        <br>
+
+      <br>
+
+      <div>
+          <h2>Hoodies</h2>
+        </div>
+
+     <div class="row">
+  <div class="col-6 col-md-4">
+  <div class="card" style="width: 23rem;">
+  <img class="card-img-top" src="{% static 'assets/img/Image 1.jpg'%}" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+  </div>
+
+  <div class="col-6 col-md-4">
+    <div class="card" style="width: 23rem;">
+  <img class="card-img-top" src="{% static 'assets/img/Image 3.jpg'%}" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+  </div>
+
+  <div class="col-6 col-md-4">
+    <div class="card" style="width: 23rem;">
+  <img class="card-img-top" src="{% static 'assets/img/Image 3.jpg'%}" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+  </div>
+    </div>
+      <br>
+
+<!--        Modal begins-->
+<div class="modal fade" id="ModalToggle21" aria-hidden="true" aria-labelledby="ModalToggleLabel4" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="ModalToggleLabel4">Place order</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+           </div>
+             <div class="modal-body">
+<!--                 first form begins-->
+               <form action="/hoodies" class='pad-bg' id="myForm2" enctype="multipart/form-data" method="post">
+
+                      {% csrf_token %}
+
+                  <div class="form-group">
+                   <label>Parent Name</label>
+                    <input type="text" class="i-box form-control input-lg" name="parents name2" required/>
+                     </div>
+                       <div class="form-group">
+                           <label>Member Name</label>
+                            <input type="text" class="form-control input-lg" name="members name2" required/>
+                             </div>
+                              <div class="form-group">
+						<label>What color would u like?</label>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input type="radio" id="customRadioInline21" value="blue" name="color2" class="custom-control-input" checked="">
+							<label class="custom-control-label" for="customRadioInline21">Blue</label>
+						</div>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input type="radio" id="customRadioInline22" value="black" name="color2" class="custom-control-input">
+							<label class="custom-control-label" for="customRadioInline22">Black</label>
+						</div>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input type="radio" id="customRadioInline23" value="red" name="color2" class="custom-control-input">
+							<label class="custom-control-label" for="customRadioInline23">Red</label>
+						</div>
+                                   <div class="form-group">
+						<label>Choose size</label>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input type="radio" id="customRadioInline24" value="small" name="size2" class="custom-control-input2" checked="">
+							<label class="custom-control-label" for="customRadioInline24">Small</label>
+						</div>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input type="radio" id="customRadioInline25" value="medium" name="size2" class="custom-control-input22">
+							<label class="custom-control-label" for="customRadioInline25">Medium</label>
+						</div>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input type="radio" id="customRadioInline26" value="large" name="size2" class="custom-control-input">
+							<label class="custom-control-label" for="customRadioInline26">Large</label>
+						</div>
+                             </div>
+
+                             </div>
+                        <div class="form-group">
+                           <label id="number-label2" for="number2">Number of units</label>
+						  <input type="number" name="units2" id="number2" min="0" max="99" class="form-control" placeholder="Amount" required>
+                         </div>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-success mt-2" type="submit">order</button>
+                    </div>
+                </form>
+                 </div>
+                   <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Close</button>
+                    <button class="btn btn-primary" data-bs-target="#ModalToggle22" data-bs-toggle="modal" data-bs-dismiss="modal">Pay</button>
+                  </div>
+            </div>
+        </div>
+    </div>
+<!--        first form/modal ends-->
+
+<!--        second modal begin-->
+<div class="modal fade" id="ModalToggle22" aria-hidden="true" aria-labelledby="ModalToggleLabel5" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalToggleLabel5">Pay here</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        lass="modal-body">
+             <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+                    <strong>{{message}}</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+          <form method="POST" action="/pay">
+              {% csrf_token %}
+                <label class="form-label mt-5">Phone Number</label>
+                <input type="number" name="phone" value="254" class="form-control">
+                <label class="form-label mt-5">Amount</label>
+              <input type="number" name="amount" class="form-control" placeholder="Please Enter Amount">
+
+              <input type="submit" name="submit" class="form-control mt-5 btn btn-success" value="pay">
+
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-bs-target="#ModalToggle23" data-bs-toggle="modal" data-bs-dismiss="modal">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--        second form ends-->
+
+<!--        Third form starts-->
+        <div class="modal fade" id="ModalToggle23" aria-hidden="true" aria-labelledby="ModalToggleLabel6" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalToggleLabel6">Pay here</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h2>THank you!!!</h2>
+      </div>
+      <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--       Trigger button -->
+<a class="btn btn-primary" data-bs-toggle="modal" href="#ModalToggle21" role="button">Buy Now</a>
+<!--        trigger end-->
+        <br>
+
+ <div>
+          <h2>Chess goodies</h2>
+        </div>
+
+     <div class="row">
+  <div class="col-6 col-md-4">
+  <div class="card" style="width: 23rem;">
+  <img class="card-img-top" src="{% static 'assets/img/Image 1.jpg'%}" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+  </div>
+
+  <div class="col-6 col-md-4">
+    <div class="card" style="width: 23rem;">
+  <img class="card-img-top" src="{% static 'assets/img/Image 1.jpg'%}" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+  </div>
+
+       <div class="col-6 col-md-4">
+    <div class="card" style="width: 23rem;">
+  <img class="card-img-top" src="{% static 'assets/img/Image 1.jpg'%}" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+  </div>
+
+     </div>
+
+ <br>
+<!--        Modal beigins-->
+<div class="modal fade" id="ModalToggle31" aria-hidden="true" aria-labelledby="ModalToggleLabel7" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="ModalToggleLabel7">Place order</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+           </div>
+             <div class="modal-body">
+<!--                 first form begins-->
+               <form action="/goodies" class='pad-bg' id="myForm3" enctype="multipart/form-data" method="post">
+                    {% csrf_token %}
+                  <div class="form-group">
+                   <label>Parent Name</label>
+                    <input type="text" class="i-box form-control input-lg" name="parents name3" required/>
+                     </div>
+                       <div class="form-group">
+                           <label>Member Name</label>
+                            <input type="text" class="form-control input-lg" name="members name3" required/>
+                             </div>
+                              <div class="form-group">
+                               <div class="form-group mt-2">
+                                 <select id="item" name="item" class="form-control" required>
+                            <option selected value="">select item</option>
+                            <option value="Board">Chess Board</option>
+                            <option value="Clock">Chess Clock</option>
+                            <option value="bag">Chess bag</option>
+                                 </select>
+                               </div>
+                             </div>
+                        <div class="form-group">
+                           <label id="number-label3" for="number3">Number of units</label>
+						  <input type="number" name="units3" id="number3" min="0" max="99" class="form-control" placeholder="Amount" required>
+                         </div>
+                     <div class="d-grid gap-2">
+                        <button class="btn btn-success mt-2" type="submit">order</button>
+                    </div>
+                </form>
+                 </div>
+                   <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Close</button>
+                    <button class="btn btn-primary" data-bs-target="#ModalToggle32" data-bs-toggle="modal" data-bs-dismiss="modal">Pay</button>
+                  </div>
+            </div>
+        </div>
+    </div>
+<!--        first form/modal ends-->
+
+<!--        second modal begin-->
+<div class="modal fade" id="ModalToggle32" aria-hidden="true" aria-labelledby="ModalToggleLabel8" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalToggleLabel8">Pay here</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       lass="modal-body">
+             <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+                    <strong>{{message}}</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+          <form method="POST" action="/pay">
+              {% csrf_token %}
+                <label class="form-label mt-5">Phone Number</label>
+                <input type="number" name="phone" value="254" class="form-control">
+                <label class="form-label mt-5">Amount</label>
+              <input type="number" name="amount" class="form-control" placeholder="Please Enter Amount">
+
+              <input type="submit" name="submit" class="form-control mt-5 btn btn-success" value="pay">
+
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-bs-target="#ModalToggle33" data-bs-toggle="modal" data-bs-dismiss="modal">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--        second form ends-->
+
+<!--        Third form starts-->
+        <div class="modal fade" id="ModalToggle33" aria-hidden="true" aria-labelledby="ModalToggleLabel9" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalToggleLabel9">Pay here</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h2>THank you!!!</h2>
+      </div>
+      <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--       Trigger button -->
+<a class="btn btn-primary" data-bs-toggle="modal" href="#ModalToggle31" role="button">Buy Now</a>
+<!--        trigger end-->
+        <br>
+       <br>
+
+    </section>
+      <!-- /Starter Section Section -->
+
+  </main>
+
+{%endblock%}

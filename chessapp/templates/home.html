@@ -1,0 +1,692 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block content%}
+
+ <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.html">JUJA ST PETERS CHESS CLUB</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">HOME</a></li>
+          <li><a class="nav-link scrollto" href="#about">ABOUT</a></li>
+          <li><a class="nav-link scrollto" href="#services">EVENTS CALENDAR</a></li>
+          <li><a class="nav-link scrollto " href="#portfolio">GALLERY</a></li>
+          <!--<li><a class="nav-link scrollto" href="#pricing">EVENTS CALENDAR</a></li> -->
+          <li><a class="nav-link scrollto" href="#shop">SHOP</a></li>
+          <li><a class="nav-link scrollto" href="#contact">CONTACT US</a></li>
+        </ul>
+        </nav>
+     </div>
+  </header>
+
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
+      <h1>Welcome to JUJA ST PETERS CHESS CLUB</h1>
+      <h2> “Chess holds its master in its own bonds, shackling the mind and brain so that the inner freedom of the very strongest must suffer.” – Albert Einstein</h2>
+      <a href="#about" class="btn-get-started scrollto">Get Started</a>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
+            <img src="{% static 'assets/img/about.jpg'%}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
+            <h3> “Chess is a war over the board. The object is to crush the opponent’s mind.” – Bobby Fischer
+   </h3>
+            <p class="fst-italic">
+              “One doesn’t have to play well, it’s enough to play better than your opponent.” – Siegbert Tarrasch
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> “A win by an unsound combination, however showy, fills me with artistic horror” - Wilhelm Steinitz</li>
+              <li><i class="bi bi-check-circle"></i>“We cannot resist the fascination of sacrifice, since a passion for sacrifices is part of a Chess player's nature.” - Rudolf Spielman
+   </li>
+              <li><i class="bi bi-check-circle"></i>“Half the variations which are calculated in a tournament game turn out to be completely superfluous. Unfortunately, no one knows in advance which half.” – Jan Timman</li>
+            </ul>
+            <p>
+              “It will be cheering to know that many people are skillful chess players, though in many instances their brains, in a general way, compare unfavorably with the cognitive faculties of a rabbit.” – James Mortimer
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- End About Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-4" data-aos="fade-up">
+            <div class="box">
+              <span>01</span>
+              <h4>Bernhard Horwitz</h4>
+              <p>“One bad move nullifies forty good ones.” </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="150">
+            <div class="box">
+              <span>02</span>
+              <h4>Paul Morphy</h4>
+              <p>"Help your pieces so they can help you."</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
+            <div class="box">
+              <span>03</span>
+              <h4> Mikhail Botvinnik</h4>
+              <p> "Chess is the art of analysis."
+</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= Clients Section ======= -->
+   <!------ <section id="clients" class="clients">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="row d-flex align-items-center">
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="{% static 'assets/img/clients/client-1.png'%}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="{% static 'assets/img/clients/client-2.png'%}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="{% static 'assets/img/clients/client-3.png'%}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="{% static 'assets/img/clients/client-4.png'%}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="{% static 'assets/img/clients/client-5.png'%}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="{% static 'assets/img/clients/client-6.png'%}" class="img-fluid" alt="">
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <-- End Clients Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <span>UPCOMING EVENTS</span>
+          <h2>UPCOMING EVENTS</h2>
+          <p>Do not miss out on our upcoming events</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4><a href="">JANUARY</a></h4>
+              <p>KNYCC - Kiambu Regional Qualifiers 2024 U8 Open</p>
+
+              <!--        Modal beigins-->
+<div class="modal fade" id="ModalToggle11" aria-hidden="true" aria-labelledby="ModalToggleLabel11" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="ModalToggleLabel11">Submit Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+           </div>
+             <div class="modal-body">
+<!--                 first form begins-->
+               <form action="/events" class='pad-bg' enctype="multipart/form-data" method="post">
+                     {% csrf_token %}
+                  <div class="form-group">
+                   <label>Parent Name</label>
+                    <input type="text" class="i-box form-control input-lg" name="parent name1" required/>
+                     </div>
+                       <div class="form-group">
+                           <label>Member Name</label>
+                            <input type="text" class="form-control input-lg" name="member name1" required />
+                             </div>
+                              <div class="form-group">
+						<label>Admission number</label>
+                            <input type="number" class="form-control input-lg" name="adm no" required/>
+                             </div>
+                        <div class="form-group">
+                          <label>Class</label>
+                            <input type="text" class="form-control input-lg" name="Class" required/>
+                         </div>
+                    <div class="form-group">
+                          <label>Date of birth</label>
+                            <input type="text" class="form-control input-lg" name="dob" required/>
+                         </div>
+                 <div class="form-group">
+                   <label>Gender</label>
+                   <div class="custom-control custom-radio custom-control-inline" >
+							<input type="radio"  value="Male"  class="custom-control-input" checked=""  name="gender">
+							<label class="custom-control-label">Male</label>
+						</div>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input type="radio"  value="Female"  class="custom-control-input" name="gender">
+							<label class="custom-control-label">Female</label>
+						</div>
+                 </div>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-success mt-2" type="submit">submit</button>
+                    </div>
+
+                </form>
+                 </div>
+                   <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Close</button>
+                    <button class="btn btn-primary" data-bs-target="#ModalToggle12" data-bs-toggle="modal" data-bs-dismiss="modal">Pay</button>
+                  </div>
+            </div>
+        </div>
+    </div>
+<!--        first form/modal ends-->
+
+<!--        second modal begin-->
+<div class="modal fade" id="ModalToggle12" aria-hidden="true" aria-labelledby="ModalToggleLabel12" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalToggleLabel12">Pay here</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+             <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+                    <strong>{{message}}</strong>
+              </div>
+          <form method="POST" action="/pay">
+              {% csrf_token %}
+                <label class="form-label mt-5">Phone Number</label>
+                <input type="number" name="phone" value="254" class="form-control">
+                <label class="form-label mt-5">Amount</label>
+              <input type="number" name="amount" class="form-control" placeholder="Please Enter Amount">
+
+              <input type="submit" name="submit" class="form-control mt-5 btn btn-success" value="pay">
+
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-bs-target="#ModalToggle13" data-bs-toggle="modal" data-bs-dismiss="modal">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--        second form ends-->
+
+<!--        Third form starts-->
+        <div class="modal fade" id="ModalToggle13" aria-hidden="true" aria-labelledby="ModalToggleLabel13" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalToggleLabel13">Pay here</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h2>THank you!!!</h2>
+      </div>
+      <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--       Trigger button -->
+<a class="btn btn-primary" data-bs-toggle="modal" href="#ModalToggle11" role="button">Pay here</a>
+<!--        trigger end-->
+            </div>
+          </div>
+
+
+
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="150">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4><a href="">FEBRUARY</a></h4>
+              <p>KNYCCC LAIKIPIA REGIONAL QUALIFIERS 2024 UNDER 10 OPEN</p>
+
+<!--       Trigger button -->
+<a class="btn btn-primary" data-bs-toggle="modal" href="#ModalToggle11" role="button">Pay here</a>
+<!--        trigger end-->
+            </div>
+          </div>
+
+
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4><a href="">MARCH</a></h4>
+              <p>Braeburn Interhouse Junior Chess Tournament - Under 13</p>
+<!--       Trigger button -->
+<a class="btn btn-primary" data-bs-toggle="modal" href="#ModalToggle11" role="button">Pay here</a>
+<!--        trigger end-->
+            </div>
+          </div>
+
+
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="450">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-world"></i></div>
+              <h4><a href="">APRIL</a></h4>
+              <p>KNYCC- NAKURU REGIONAL QUALIFIERS 2024 U-10 OPEN</p>
+
+<!--       Trigger button -->
+<a class="btn btn-primary" data-bs-toggle="modal" href="#ModalToggle11" role="button">Pay here</a>
+<!--        trigger end-->
+            </div>
+          </div>
+
+
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-slideshow"></i></div>
+              <h4><a href="">MAY</a></h4>
+              <p>1st Kenya Colleges And University Chess Championship 2024 - LADIES</p>
+
+<!--       Trigger button -->
+<a class="btn btn-primary" data-bs-toggle="modal" href="#ModalToggle11" role="button">Pay here</a>
+<!--        trigger end-->
+            </div>
+          </div>
+
+
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="750">
+            <div class="icon-box">
+
+              <div class="icon"><i class="bx bx-arch"></i></div>
+              <h4><a href="">JUNE</a></h4>
+              <p>SOUTH NYANZA REGIONAL QUALIFIERS 2024 UNDER UNDER 14 OPEN</p>
+
+<!--       Trigger button -->
+<a class="btn btn-primary" data-bs-toggle="modal" href="#ModalToggle11" role="button">Pay here</a>
+<!--        trigger end-->
+
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Services Section -->
+
+    <!-- ======= shop Section ======= -->
+   <section id="shop" class="cta">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="text-center">
+          <h3>Chess club Merchandise</h3>
+          <p>Get your quality st peters merchandise to rock your outfit as you battle it out on the board </p>
+          <a class="cta-btn" href="{% url 'shop'%}">Shop Now</a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="section-title">
+          <span>GALLERY</span>
+          <h2>GALLERY</h2>
+          <p>WELCOME TO OUR GALLERY</p>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <!--<li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-web">Web</li>
+              -->
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="150">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="{% static 'assets/img/portfolio/portfolio-1.jpg'%}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+             <!-- <h4>App 1</h4>
+              <p>App</p>
+              -->
+              <a href="{% static 'assets/img/portfolio/portfolio-1.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title=""><i class="bx bx-plus"></i></a>
+             <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="{% static 'assets/img/portfolio/portfolio-2.jpg'%}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <!--<h4>Web 3</h4>
+              <p>Web</p>
+              -->
+              <a href="{% static 'assets/img/portfolio/portfolio-2.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title=""><i class="bx bx-plus"></i></a>
+              <!--<a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="{% static 'assets/img/portfolio/portfolio-3.jpg'%}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+             <!-- <h4>App 2</h4>
+              <p>App</p>
+              -->
+              <a href="{% static 'assets/img/portfolio/portfolio-3.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title=""><i class="bx bx-plus"></i></a>
+            <!--  <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <img src="{% static 'assets/img/portfolio/portfolio-4.jpg'%}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <!--<h4>Card 2</h4>
+              <p>Card</p>
+              -->
+              <a href="{% static 'assets/img/portfolio/portfolio-4.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title=""><i class="bx bx-plus"></i></a>
+             <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="{% static 'assets/img/portfolio/portfolio-5.jpg'%}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <!--<h4>Web 2</h4>
+              <p>Web</p>
+              -->
+              <a href="{% static 'assets/img/portfolio/portfolio-5.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title=""><i class="bx bx-plus"></i></a>
+            <!--  <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="{% static 'assets/img/portfolio/portfolio-6.jpg'%}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+             <!-- <h4>App 3</h4>
+              <p>App</p>
+              -->
+              <a href="{% static 'assets/img/portfolio/portfolio-6.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title=""><i class="bx bx-plus"></i></a>
+             <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <img src="{% static 'assets/img/portfolio/portfolio-7.jpg'%}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <!-- <h4>App 3</h4>
+              <p>App</p>
+              -->
+              <a href="{% static 'assets/img/portfolio/portfolio-7.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title=""><i class="bx bx-plus"></i></a>
+            <!--  <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <img src="{% static 'assets/img/portfolio/portfolio-8.jpg'%}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+               <!-- <h4>App 3</h4>
+              <p>App</p>
+              -->
+              <a href="{% static 'assets/img/portfolio/portfolio-8.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title=""><i class="bx bx-plus"></i></a>
+             <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="{% static 'assets/img/portfolio/portfolio-9.jpg'%}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <!-- <h4>App 3</h4>
+              <p>App</p>
+              -->
+              <a href="{% static 'assets/img/portfolio/portfolio-9.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title=""><i class="bx bx-plus"></i></a>
+             <!-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= events Section ======= -->
+    <!-- <section id="pricing" class="pricing">
+      <div class="container">
+
+        <div class="section-title">
+          <span>UPCOMING EVENTS</span>
+          <h2>UPCOMING EVENTS</h2>
+          <p>Do not miss out on our upcoming events</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="150">
+            <div class="box">
+              <div class="card-body">
+                <h5 class="card-title"><a href="">Marketing Strategies</a></h5>
+                <p class="fst-italic text-center">Sunday, November 15th at 7:00 pm</p>
+                <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
+              </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-4 mt-md-0" data-aos="zoom-in">
+            <div class="box featured">
+             <div class="card-body">
+                <h5 class="card-title"><a href="">Marketing Strategies</a></h5>
+                <p class="fst-italic text-center">Sunday, November 15th at 7:00 pm</p>
+                <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
+            <div class="box">
+               <div class="card-body">
+                <h5 class="card-title"><a href="">Introduction to webdesign</a></h5>
+                <p class="fst-italic text-center">Sunday, September 26th at 7:00 pm</p>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+              </div>
+
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><-- End Pricing Section --> --!>
+
+
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container">
+
+        <div class="section-title">
+          <span>Team</span>
+          <h2>Team</h2>
+          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
+            <div class="member">
+              <img src="{% static 'assets/img/team/team-1.jpg'%}" alt="">
+              <h4>Walter White</h4>
+              <span>Chief Executive Officer</span>
+              <p>
+                Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+              </p>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
+            <div class="member">
+              <img src="{% static 'assets/img/team/team-2.jpg'%}" alt="">
+              <h4>Sarah Jhinson</h4>
+              <span>Product Manager</span>
+              <p>
+                Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
+              </p>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
+            <div class="member">
+              <img src="{% static 'assets/img/team/team-3.jpg'%}" alt="">
+              <h4>William Anderson</h4>
+              <span>CTO</span>
+              <p>
+                Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
+              </p>
+              <div class="social">
+                <a href=""><i class="bi bi-twitter"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <span>Contact</span>
+          <h2>Contact</h2>
+          <p>Feel free to contact us</p>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-6">
+            <div class="info-box mb-4">
+              <i class="bx bx-map"></i>
+              <h3>Our Address</h3>
+              <p>Kalimoni Nairobi, Thika</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-envelope"></i>
+              <h3>Email Us</h3>
+              <p><a href="mailto:contact@example.com">info@jujastpeters.gmail.com</a></p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-phone-call"></i>
+              <h3>Call Us</h3>
+              <p>+254727401192</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row" data-aos="fade-up">
+
+          <div class="col-lg-6 ">
+            <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15956.30495863694!2d37.0112978!3d-1.1050791!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f477ee94234b5%3A0x6ae7e77101068ac1!2sJuja%20St.%20Peter&#39;s%20School!5e0!3m2!1sen!2ske!4v1711355595620!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+ {%endblock%}
